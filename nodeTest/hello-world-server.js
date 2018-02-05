@@ -4,7 +4,9 @@ http.createServer(function handler(req, res) {
     res.end('Hello World\n');//http://127.0.0.1:1337/访问
 }).listen(1337, '127.0.0.1');//防止因运行进程还在内存导致的端口占用
 console.log('Server running at http://127.0.0.1:1337/');
-var mysql      = require('mysql');
+
+var mysql      = require('mysql');//推荐cmd进入本地工程（推荐）后npm install mysql
+//package.json中dependencies节点中自动加入mysql
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
